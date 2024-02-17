@@ -212,11 +212,6 @@
        <img id=gameFront src="item/試作版ゲーム画面近景.png"">
        <img id=gameButton src="item/試作版ゲーム画面ボタン.png"">
        <div id=cover></div>
-       <div id=toLeft></div>
-       <div id=toRight></div>
-       <div id=ataBut></div>
-       <div id=gunBut></div>
-       <div id=tanBut></div>
        <div id=partySet></div>
        <div id=pushToLeft></div>
        <div id=pushToRight></div>
@@ -237,6 +232,11 @@
        <h1 id="lyricaSkillBulletBase"></h1>
        <h1 id="matoiSkillBulletBase"></h1>
        <img id=gameOverScreen src=item/ゲームオーバー画面.png>
+       <div id=toLeft></div>
+       <div id=toRight></div>
+       <div id=ataBut></div>
+       <div id=gunBut></div>
+       <div id=tanBut></div>
       </div>
 
       <div id=clearResultScreen>
@@ -2968,6 +2968,10 @@ function partyClick(){
  actionGameScreen.style.zIndex=0;
  clearResultScreen.style.zIndex=-60;
  ataBut.style.zIndex=40;
+ gunBut.style.zIndex=40;
+ tanBut.style.zIndex=40;
+ toRight.style.zIndex=40;
+ toLeft.style.zIndex=40;
  partySet();
  document.documentElement.style.setProperty('--gameStartCount3', "0.5");
  setTimeout(function(){
