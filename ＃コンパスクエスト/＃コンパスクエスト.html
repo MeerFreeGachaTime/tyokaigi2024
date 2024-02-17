@@ -2961,8 +2961,12 @@ function stageClick(){
 
 function partyClick(){
  document.documentElement.style.setProperty('--gameClearScreen', "0");
+ homeScreen.style.zIndex=-60;
+ stageSelectScreen.style.zIndex=-60;
+ partySelectScreen.style.zIndex=-60;
  enemySet.style.zIndex=0;
  actionGameScreen.style.zIndex=0;
+ clearResultScreen.style.zIndex=-60;
  partySet();
  document.documentElement.style.setProperty('--gameStartCount3', "0.5");
  setTimeout(function(){
