@@ -1,4 +1,4 @@
-
+console.log("ver.1");
 
 
 phase=0;
@@ -143,15 +143,15 @@ heimdallrAct2=0;
 window.addEventListener('load', (event) => {
 
 const heroMove = document.getElementById("heroMoveId");
-heroMove.addEventListener("touchstart", function(){
+heroMove.addEventListener("touchstart", function(){console.log("start");
  startSidePosi=touch.screenX;
 });
-heroMove.addEventListener("touchmove",function(){
+heroMove.addEventListener("touchmove",function(){console.log("move");
  moveSidePosi=touch.screenX;
  if(Number(startSidePosi)+5<=moveSidePosi){rightOn=1;}
  else if(Number(startSidePosi)-5>=moveSidePosi){leftOn=1;}
 });
-heroMove.addEventListener("touchend",function(){
+heroMove.addEventListener("touchend",function(){console.log("end");
  rightOn=0;
  leftOn=0;
 });
