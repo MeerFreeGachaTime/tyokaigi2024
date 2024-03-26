@@ -1,4 +1,4 @@
-console.log("ver.1");
+
 
 
 phase=0;
@@ -140,7 +140,7 @@ heimdallrAct2=0;
 
 
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', (event) => {console.log("ver.1");
 
 const heroMove = document.getElementById("heroMoveId");
 heroMove.addEventListener("touchstart", function(){console.log("start");
