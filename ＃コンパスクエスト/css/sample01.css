@@ -1,0 +1,5195 @@
+
+:root{
+  --titleBaseLeft:0px;
+  --baseWidth: 240px;
+  --baseHeight:436px;
+  --titleButton:1;
+  --titleAnima: -60;
+  --stageAnima: 40%;
+  --stageCliAnimaH: 60%;
+  --stageCliAnimaL: 33%;
+  --partyDec:1;
+  --partyAnima:10.5%;
+  --heroHPbar:31%;
+  --enemyHPbar:46.5%;
+  --damageEffect:5%;
+  --mekahanHandSide:10%;
+  --mekahanHandLength:52%;
+  --mekahanSetSide:16%;
+  --mekahanOpacity1:1;
+  --mekahanOpacity2:0;
+  --mekahanOpacity3:0;
+  --mekahanOpacity4:0;
+  --mekahanOpacity5:0;
+  --mekahanOpacity6:0;
+  --mekahanOpacity7:0;
+  --mekahanOpacity8:0;
+  --mekahanOpacity9:0;
+  --miniMekahan1:-1;
+  --miniMekahan2:1;
+  --miniMekahanSide:17.5%;
+  --jet:90%;
+  --shift: 0px;
+  --direction:-1;
+  --enemyNatadecoco1:0;
+  --enemyNatadecoco2:0;
+  --enemyNatadecoco3:0;
+  --gameClearScreen:0;
+  --EndingExplosion1:0;
+  --EndingExplosion2:0;
+  --EndingExplosion3:0;
+  --mekahanEndingSet:0;
+  --mekahanSet:1;
+  --miniMekahanField:1;
+  --whiteOut:0;
+  --backDamageEffect:0;
+  --homeColor:#0012ff;
+  --homeMenuButton:0;
+  --homeFeedBackButton:0;
+  --homeHeroButton:0;
+  --homeAsistButton:0;
+  --homeItemButton:0;
+  --homeBattleButton:0;
+  --homeCraftButton:0;
+  --homeShopButton:0;
+  --stageSelectReturnButton:0;
+  --level1SelectButton:0;
+  --level2SelectButton:0;
+  --level3SelectButton:0;
+  --stageTitleButton:0;
+  --toNextStageButton:0;
+  --toPreviousStageButton:0;
+  --partySelectReturnButton:0;
+  --partySelectDecisionButton:0;
+  --sprinterSelectBack:80%;
+  --sprinterSelectBackButton:0;
+  --attackerSelectBack:0%;
+  --attackerSelectBackButton:0;
+  --gunnerSelectBack:0%;
+  --gunnerSelectBackButton:0;
+  --tankSelectBack:0%;
+  --tankSelectBackButton:0;
+  --atariSpSelectButton:1;
+  --voidollSpSelectButton:1;
+  --nikolaSpSelectButton:1;
+  --nohoAtSelectButton:1;
+  --tadaomiAtSelectButton:1;
+  --lucianoAtSelectButton:1;
+  --lyricaGuSelectButton:1;
+  --matoiGuSelectButton:1;
+  --justiceTaSelectButton:1;
+  --jeanneTaSelectButton:1;
+  --marcosTaSelectButton:1;
+  --checkBeforeBattleYesButton:0;
+  --checkBeforeBattleNoButton:0;
+  --checkBeforeBattleBox:0%;
+  --pushToLeft:0;
+  --pushToRight:0;
+  --pushAtaBut:0;
+  --pushGunBut:0;
+  --pushTanBut:0;
+  --gameStartCount3:0;
+  --gameStartCount2:0;
+  --gameStartCount1:0;
+  --gameStartCount0:0;
+  --clearResultToHomeButton:0;
+  --herotReturnButton:0;
+  --granatIcicle1:1;
+  --granatAta2Ani:43.35%;
+  --granatSet:1;
+  --granatEndingSet:0;
+  --libeluluLeft:45%;
+  --libeluluTop:65%;
+  --libeluluSet:1;
+  --libeluluAttackEffect2aAni:0%;
+  --libeluluAttackEffect2bAni:0%;
+  --libeluluAttackEffect2cAni:0%;
+  --libeluluAttackEffect2dAni:0%;
+  --libeluluAttackEffect2eAni:0%;
+  --libeluluAttackEffect2fAni:0%;
+  --libeluluDirection:-1;
+  --libeluluAttackEffect3:0%;
+  --libeluluEndingSet:0;
+  --lulucaSkillBulletLeft:0%;
+  --kuiroTanukiSet:24%;
+  --kuiroHitoSet:70%;
+  --kuiroDirection:1;
+  --kuiroEndingSet:0;
+  --kuiroSet:1;
+  --heroLiberateOKButton:0;
+  --yuraraTop:65%;
+  --yuraraLeft:45%;
+  --yuraraDirection:1;
+  --yuraraEndingSet:0;
+  --yuraraParturitionBase1:1;
+  --yuraraParturitionBase2:1;
+  --cerberusEndingSet:0;
+  --cerberusSet:1;
+  --cerberusAttackD:50%;
+  --itemReturnButton:0;
+  --craftReturnButton:0;
+  --craftCheckYesButton:0;
+  --craftCheckNoButton:0;
+  --craftErrorOKButton:0;
+  --itemCraftOKButton:0;
+  --shopReturnButton:0;
+  --shopCheckYesButton:0;
+  --shopCheckNoButton:0;
+  --shopErrorOKButton:0;
+  --itemShopOKButton:0;
+  --ankokuTop:38%;
+  --ankokuLeft:45%;
+  --ankokuEndingSet:0;
+  --ankokuAttackAAni:0%;
+  --ankokuAttackBAni:0%;
+  --ankokuWidth:10%;
+  --heimdallrSet:1;
+  --heimdallrEndingSet:0;
+  --heimdallrBottom:17.5%;
+  --heimdallrLeft:60%;
+  --heimdallrWidth:10%;
+  --heimdallrDirection:1;
+  --heimdallrAttackAwidth:0%;
+  --heimdallrAttackAleft:0%;
+  --heimdallrBeam:0%;
+  --nidhoggrSkill1:0%;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+.shift{
+  position:absolute;
+  left:var(--shift);
+  width: var(--shift);
+  transform: scale(var(--direction), 1);
+}
+
+
+
+body {
+  -webkit-touch-callout:none; /* リンク長押しのポップアップを無効化 */
+  -webkit-user-select:none; /* テキスト長押しの選択ボックスを無効化 */
+}
+
+html,body{
+  overflow: hidden
+}
+
+#base{
+position:absolute;
+top:0%;
+height:100%;
+width:99%;
+z-index:-100;
+}
+
+#titleBase{
+position:relative;
+height:var(--baseHeight);
+width:var(--baseWidth);
+top: 0%;
+left: var(--titleBaseLeft);
+z-index:-100;
+}
+
+#titleBack{
+position:absolute;
+height:100%;
+z-index:-50;
+}
+
+#titleStr1{
+position:absolute;
+height:100%;
+z-index:-40;
+}
+
+#titleStr2{
+position:absolute;
+height:100%;
+z-index:-10;
+animation: titleAni1 1s 0s infinite;
+}
+
+@keyframes titleAni1{
+0%{
+z-index:-10;
+}
+50%{
+z-index:var(--titleAnima);
+}
+100%{
+z-index:-10;
+}
+}
+
+#titleButton{
+position:absolute;
+opacity:var(--titleButton);
+top:0px;
+height:100%;
+z-index:-30;
+}
+
+#tiBu{
+position:absolute;
+width:42%;
+height:15%;
+display: block;
+left:28.9%;
+top:43%;
+}
+
+#homeScreen{
+position:absolute;
+top:0%;
+left:0%;
+margin-top:0%;
+margin-bottom:0%;
+height:100%;
+width:100%;
+}
+
+#homeBackCoror{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+backGround:var(--homeColor);
+}
+
+#homeBack{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+}
+
+
+
+#homeCharacter{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+}
+
+#homeMenuButton{
+position:absolute;
+opacity:var(--homeMenuButton);
+backGround:#ffffff;
+left:3%;
+top:3.75%;
+width:22.7%;
+height:10.4%;
+}
+
+#homeFeedBack{
+position:absolute;
+backGround:#ffffff;
+left:68%;
+top:5%;
+width:30%;
+height:10%;
+}
+
+#homeFeedBackButton{
+position:absolute;
+opacity:var(--homeFeedBackButton);
+backGround:#ffffff;
+left:68%;
+top:5%;
+width:30%;
+height:10%;
+}
+
+#homeHeroButton{
+position:absolute;
+opacity:var(--homeHeroButton);
+backGround:#ffffff;
+left:6.9%;
+bottom:6.25%;
+width:11.2%;
+height:20.4%;
+border-radius: 50%;
+}
+
+#homeItemButton{
+position:absolute;
+opacity:var(--homeItemButton);
+backGround:#ffffff;
+left:22.9%;
+bottom:6.25%;
+width:11.2%;
+height:20.4%;
+border-radius: 50%;
+}
+
+#homeCraftButton{
+position:absolute;
+opacity:var(--homeCraftButton);
+backGround:#ffffff;
+left:39%;
+bottom:6.25%;
+width:11.2%;
+height:20.4%;
+border-radius: 50%;
+}
+
+#homeShopButton{
+position:absolute;
+opacity:var(--homeShopButton);
+backGround:#ffffff;
+left:55%;
+bottom:6.25%;
+width:11.2%;
+height:20.4%;
+border-radius: 50%;
+}
+
+#homeBattleButton{
+position:absolute;
+opacity:var(--homeBattleButton);
+backGround:#ffffff;
+left:73%;
+bottom:5%;
+width:22.7%;
+height:41.3%;
+border-radius: 50%;
+}
+
+.BlackBack{
+position:absolute;
+opacity:0.8;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+backGround:#000000;
+}
+
+.selectedStage{
+position:absolute;
+height:50%;
+left:36.2%;
+top:18%;
+}
+
+#stageSelectReturn{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#stageSelectReturn1{
+position:absolute;
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#stageSelectReturn2{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#stageSelectReturnButton{
+position:absolute;
+opacity:var(--stageSelectReturnButton);
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#level1Select1{
+position:absolute;
+top:70%;
+left:25%;
+width:15%;
+height:25%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#level1Select2{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#level1Select{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#level1Remuneration{
+position:absolute;
+bottom:10%;
+left:28%;
+height:50%;
+}
+
+.itemNum{
+position:absolute;
+opacity:0.8;
+bottom:15%;
+left:60%;
+height:30%;
+width:40%;
+font-size:3vh;
+color:#ffffff;
+backGround:var(--homeColor);
+}
+
+#level1SelectButton{
+position:absolute;
+opacity:var(--level1SelectButton);
+top:70%;
+left:25%;
+width:15%;
+height:25%;
+backGround:#ffffff;
+}
+
+#level2Select1{
+position:absolute;
+top:70%;
+left:41%;
+width:15%;
+height:25%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#level2Select2{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#level2Select{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#level2Remuneration{
+position:absolute;
+bottom:10%;
+left:28%;
+height:50%;
+}
+
+#level2SelectButton{
+position:absolute;
+opacity:var(--level2SelectButton);
+top:70%;
+left:41%;
+width:15%;
+height:25%;
+backGround:#ffffff;
+}
+
+#level3Select1{
+position:absolute;
+top:70%;
+left:57%;
+width:15%;
+height:25%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#level3Select2{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#level3Select{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#level3Remuneration{
+position:absolute;
+bottom:10%;
+left:28%;
+height:50%;
+}
+
+#level3SelectButton{
+position:absolute;
+opacity:var(--level3SelectButton);
+top:70%;
+left:57%;
+width:15%;
+height:25%;
+backGround:#ffffff;
+}
+
+#stageTitle1{
+position:absolute;
+top:5%;
+left:30%;
+width:40%;
+height:10%;
+backGround:var(--homeColor);
+}
+
+#stageTitle2{
+position:absolute;
+top:10%;
+left:2.5%;
+width:95%;
+height:80%;
+backGround:#ffffff;
+}
+
+#stageTitleBase{
+position:absolute;
+height:100%;
+width:100%;
+margin-top:0%;
+margin-bottom:0%;
+}
+
+#stageTitle{
+position:absolute;
+top:10%;
+left:2.5%;
+width:95%;
+height:80%;
+font-size:5vh;
+display: inline-block;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#stageTitleButton{
+position:absolute;
+opacity:var(--stageTitleButton);
+top:5%;
+left:30%;
+width:40%;
+height:15%;
+backGround:var(--homeColor);
+}
+
+#toNextStage1{
+position:absolute;
+top:45%;
+right:20%;
+width:11%;
+height:20%;
+border-radius:50%;
+backGround:#ffffff;
+}
+
+#toNextStage2{
+position:absolute;
+top:5%;
+right:5%;
+width:90%;
+height:90%;
+border-radius:50%;
+backGround:var(--homeColor);
+}
+
+#toNextStage3{
+position:absolute;
+top:5%;
+right:20%;
+top:25%;
+height:50%;
+}
+
+#toNextStageButton{
+position:absolute;
+opacity:var(--toNextStageButton);
+top:45%;
+right:20%;
+width:11%;
+height:20%;
+border-radius:50%;
+backGround:#ffffff;
+}
+
+#toPreviousStage1{
+position:absolute;
+transform: scale(-1, 1);
+top:45%;
+left:20%;
+width:11%;
+height:20%;
+border-radius:50%;
+backGround:#ffffff;
+}
+
+#toPreviousStage2{
+position:absolute;
+top:5%;
+right:5%;
+width:90%;
+height:90%;
+border-radius:50%;
+backGround:var(--homeColor);
+}
+
+#toPreviousStage3{
+position:absolute;
+top:5%;
+right:20%;
+top:25%;
+height:50%;
+}
+
+#toPreviousStageButton{
+position:absolute;
+opacity:var(--toPreviousStageButton);
+transform: scale(-1, 1);
+top:45%;
+left:20%;
+width:11%;
+height:20%;
+border-radius:50%;
+backGround:#ffffff;
+}
+
+/*ヒーロー一覧*/
+#heroScreen{
+position:absolute;
+width:100%;
+height:100%;
+z-index:-60;
+}
+
+#heroToReturn{
+position:absolute;
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#herotReturnButton{
+position:absolute;
+opacity:var(--herotReturnButton);
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+
+#itemListScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#itemReturn{
+position:absolute;
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#itemReturnButton{
+position:absolute;
+opacity:var(--itemReturnButton);
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#itemList{
+position:absolute;
+top:20%;
+left:2%;
+height:70%;
+width:50%;
+overflow:auto;
+border-radius:3%;
+backGround:var(--homeColor);
+}
+
+#itemStatusDetail{
+position:absolute;
+top:5%;
+left:54%;
+height:90%;
+width:45%;
+overflow:auto;
+border-radius:3%;
+backGround:var(--homeColor);
+}
+
+.itemStatusIcon{
+width:16%;
+margin:2%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#itemStatusDetailImg{
+position:absolute;
+top:2%;
+left:35%;
+width:30%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#itemStatusDetailName{
+position:absolute;
+top:32%;
+left:10%;
+width:80%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#itemStatusDetailLv{
+position:absolute;
+top:50%;
+left:2%;
+width:20%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#itemStatusDetailLvN{
+position:absolute;
+top:50%;
+left:24%;
+width:70%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#itemStatusDetailSkill1{
+position:absolute;
+top:65%;
+left:2%;
+width:94%;
+height:auto;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#craftScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#craftReturn{
+position:absolute;
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#craftReturnButton{
+position:absolute;
+opacity:var(--craftReturnButton);
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#craftList{
+position:absolute;
+top:20%;
+left:2%;
+height:70%;
+width:50%;
+overflow:auto;
+border-radius:3%;
+backGround:#35ff8a;
+}
+
+#craftStatusDetail{
+position:absolute;
+top:5%;
+left:54%;
+height:90%;
+width:45%;
+overflow:auto;
+border-radius:3%;
+backGround:#35ff8a;
+}
+
+.craftStatusIcon{
+width:16%;
+margin:2%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#craftStatusDetailImg{
+position:absolute;
+top:2%;
+left:35%;
+width:30%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#craftStatusDetailName{
+position:absolute;
+top:32%;
+left:10%;
+width:80%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#craftStatusDetailMaterialA{
+position:absolute;
+top:60%;
+left:2%;
+width:70%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#craftStatusDetailMaterialAnum{
+position:absolute;
+top:60%;
+left:74%;
+width:20%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#craftStatusDetailMaterialB{
+position:absolute;
+top:72%;
+left:2%;
+width:70%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#craftStatusDetailMaterialBnum{
+position:absolute;
+top:72%;
+left:74%;
+width:20%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#craftNeedItemBack{
+position:absolute;
+top:50%;
+left:1%;
+width:94%;
+height:35%;
+backGround:var(--homeColor);
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+}
+
+#synthesis{
+position:absolute;
+top:88%;
+left:20%;
+width:60%;
+height:10%;
+backGround:var(--homeColor);
+}
+
+#craftCheckSet{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#craftCheck{
+position:absolute;
+top:20%;
+left:10%;
+width:80%;
+height:60%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#craftCheckYes{
+position:absolute;
+top:60%;
+left:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#craftCheckYesButton{
+position:absolute;
+opacity:var(--craftCheckYesButton);
+top:60%;
+left:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#craftCheckNo{
+position:absolute;
+top:60%;
+right:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#craftCheckNoButton{
+position:absolute;
+opacity:var(--craftCheckNoButton);
+top:60%;
+right:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#craftErrorSet{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#craftError{
+position:absolute;
+top:20%;
+left:10%;
+width:80%;
+height:60%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#craftErrorOK{
+position:absolute;
+bottom:20%;
+left:30%;
+width:40%;
+height:15%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#craftErrorOKButton{
+position:absolute;
+opacity:var(--craftErrorOKButton);
+bottom:20%;
+left:30%;
+width:40%;
+height:15%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#itemCraftSet{
+position:absolute;
+left:0%;
+top:0%;
+height:100%;
+width:100%;
+}
+
+#crafted{
+position:absolute;
+top:20%;
+left:20%;
+height:60%;
+width:60%;
+backGround:var(--homeColor);
+}
+
+#craftedItemBase{
+position:absolute;
+left:0%;
+top:0%;
+height:100%;
+width:100%;
+}
+
+#craftedItem{
+position:absolute;
+top:20%;
+left:35%;
+width:30%;
+}
+
+#itemCraftOK{
+position:absolute;
+left:30%;
+bottom:5%;
+height:20%;
+width:40%;
+backGround:var(--homeColor);
+}
+
+#itemCraftOKButton{
+position:absolute;
+opacity:var(--itemCraftOKButton);
+left:30%;
+bottom:5%;
+height:20%;
+width:40%;
+backGround:#ffffff;
+}
+
+#shopScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#shopReturn{
+position:absolute;
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#shopReturnButton{
+position:absolute;
+opacity:var(--shopReturnButton);
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#shopList{
+position:absolute;
+top:20%;
+left:2%;
+height:70%;
+width:50%;
+overflow:auto;
+border-radius:3%;
+backGround:#ffcc32;
+}
+
+#shopStatusDetail{
+position:absolute;
+top:5%;
+left:54%;
+height:90%;
+width:45%;
+overflow:auto;
+border-radius:3%;
+backGround:#ffcc32;
+}
+
+.shopStatusIcon{
+width:16%;
+margin:2%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#shopStatusDetailImg{
+position:absolute;
+top:2%;
+left:35%;
+width:30%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#shopStatusDetailName{
+position:absolute;
+top:32%;
+left:10%;
+width:80%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#shopStatusDetailValue{
+position:absolute;
+top:60%;
+left:5%;
+width:90%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#shopStatusDetailMaterialB{
+position:absolute;
+top:72%;
+left:2%;
+width:70%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#shopStatusDetailMaterialBnum{
+position:absolute;
+top:72%;
+left:74%;
+width:20%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#shopNeedItemBack{
+position:absolute;
+top:50%;
+left:1%;
+width:94%;
+height:35%;
+backGround:var(--homeColor);
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+}
+
+#buying{
+position:absolute;
+top:88%;
+left:20%;
+width:60%;
+height:10%;
+backGround:var(--homeColor);
+}
+
+#shopCheckSet{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#shopCheck{
+position:absolute;
+top:20%;
+left:10%;
+width:80%;
+height:60%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#shopCheckYes{
+position:absolute;
+top:60%;
+left:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#shopCheckYesButton{
+position:absolute;
+opacity:var(--shopCheckYesButton);
+top:60%;
+left:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#shopCheckNo{
+position:absolute;
+top:60%;
+right:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#shopCheckNoButton{
+position:absolute;
+opacity:var(--shopCheckNoButton);
+top:60%;
+right:20%;
+width:20%;
+height:15%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#shopErrorSet{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#shopError{
+position:absolute;
+top:20%;
+left:10%;
+width:80%;
+height:60%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#shopErrorOK{
+position:absolute;
+bottom:20%;
+left:30%;
+width:40%;
+height:15%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#shopErrorOKButton{
+position:absolute;
+opacity:var(--shopErrorOKButton);
+bottom:20%;
+left:30%;
+width:40%;
+height:15%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#itemShopSet{
+position:absolute;
+left:0%;
+top:0%;
+height:100%;
+width:100%;
+}
+
+#bought{
+position:absolute;
+top:20%;
+left:20%;
+height:60%;
+width:60%;
+backGround:var(--homeColor);
+}
+
+#boughtItemBase{
+position:absolute;
+left:0%;
+top:0%;
+height:100%;
+width:100%;
+}
+
+#boughtItem{
+position:absolute;
+top:20%;
+left:35%;
+width:30%;
+}
+
+#itemShopOK{
+position:absolute;
+left:30%;
+bottom:5%;
+height:20%;
+width:40%;
+backGround:var(--homeColor);
+}
+
+#itemShopOKButton{
+position:absolute;
+opacity:var(--itemShopOKButton);
+left:30%;
+bottom:5%;
+height:20%;
+width:40%;
+backGround:#ffffff;
+}
+
+#partySelectBack{
+position:absolute;
+opacity:0.8;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+backGround:#000000;
+}
+
+#partySelectReturn{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#partySelectReturn1{
+position:absolute;
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#partySelectReturn2{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#partySelectReturnButton{
+position:absolute;
+opacity:var(--partySelectReturnButton);
+top:5%;
+left:5%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#sprinterSelectBack1{
+position:absolute;
+top:17%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#002eff;
+}
+
+#sprinterSelectBack2{
+position:absolute;
+top:8%;
+left:5%;
+width:84%;
+height:84%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#sprinterSelectBackBase{
+position:absolute;
+top:8%;
+left:8%;
+width:84%;
+height:84%;
+margin-top:0%;
+margin-bottom:0%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+border-radius:10%;
+}
+
+#sprinterSelectBack{
+width:100%;
+}
+
+#sprinterSelectBackButton{
+position:absolute;
+opacity:var(--sprinterSelectBackButton);
+top:17%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#sprinterSelectBack3{
+position:absolute;
+top:10%;
+left:21.25%;
+width:60%;
+height:var(--sprinterSelectBack);
+font-size:5vh;
+border-radius:10%;
+backGround:#002eff;
+}
+
+#sprinterSecletBack4{
+ position:absolute;
+ height:90%;
+ width:90%;
+ top:5%;
+ left:5%;
+ overflow:auto;
+}
+
+#attackerSelectBack1{
+position:absolute;
+top:35%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#ff0000;
+}
+
+#attackerSelectBack2{
+position:absolute;
+top:8%;
+left:5%;
+width:84%;
+height:84%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#attackerSelectBackBase{
+position:absolute;
+top:8%;
+left:8%;
+width:84%;
+height:84%;
+margin-top:0%;
+margin-bottom:0%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+border-radius:10%;
+}
+
+#attackerSelectBack{
+width:100%;
+}
+
+#attackerSelectBackButton{
+position:absolute;
+opacity:var(--attackerSelectBackButton);
+top:35%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#attackerSelectBack3{
+position:absolute;
+top:10%;
+left:21.25%;
+width:60%;
+height:var(--attackerSelectBack);
+font-size:5vh;
+border-radius:10%;
+backGround:#ff0000;
+}
+
+#attackerSecletBack4{
+ position:absolute;
+ height:90%;
+ width:90%;
+ top:5%;
+ left:5%;
+ overflow:auto;
+}
+
+#gunnerSelectBack1{
+position:absolute;
+top:53%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#f9ff00;
+}
+
+#gunnerSelectBack2{
+position:absolute;
+top:8%;
+left:5%;
+width:84%;
+height:84%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#gunnerSelectBackBase{
+position:absolute;
+top:8%;
+left:8%;
+width:84%;
+height:84%;
+margin-top:0%;
+margin-bottom:0%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+border-radius:10%;
+}
+
+#gunnerSelectBack{
+width:100%;
+}
+
+#gunnerSelectBackButton{
+position:absolute;
+opacity:var(--gunnerSelectBackButton);
+top:53%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#gunnerSelectBack3{
+position:absolute;
+top:10%;
+left:21.25%;
+width:60%;
+height:var(--gunnerSelectBack);
+font-size:5vh;
+border-radius:10%;
+backGround:#f9ff00;
+}
+
+#gunnerSecletBack4{
+ position:absolute;
+ height:90%;
+ width:90%;
+ top:5%;
+ left:5%;
+ overflow:auto;
+}
+
+#tankSelectBack1{
+position:absolute;
+top:71%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#00ff27;
+}
+
+#tankSelectBack2{
+position:absolute;
+top:8%;
+left:5%;
+width:84%;
+height:84%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#tankSelectBackBase{
+position:absolute;
+top:8%;
+left:8%;
+width:84%;
+height:84%;
+margin-top:0%;
+margin-bottom:0%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+border-radius:10%;
+}
+
+#tankSelectBack{
+width:100%;
+}
+
+#tankSelectBackButton{
+position:absolute;
+opacity:var(--tankSelectBackButton);
+top:71%;
+left:13%;
+width:8.25%;
+height:15%;
+border-radius:10% 0 0 10%;
+backGround:#ffffff;
+}
+
+#tankSelectBack3{
+position:absolute;
+top:10%;
+left:21.25%;
+width:60%;
+height:var(--tankSelectBack);
+font-size:5vh;
+border-radius:10%;
+backGround:#00ff27;
+}
+
+#tankSecletBack4{
+ position:absolute;
+ height:90%;
+ width:90%;
+ top:5%;
+ left:5%;
+ overflow:auto;
+}
+
+.partySelectHero{
+width:100%;
+height:auto;
+}
+
+.partySelectHeroImg{
+width:10%;
+}
+
+.partySelectHeroName{
+position:absolute;
+font-size:7vh;
+left:10%;
+}
+
+.partySelectHeroSentence{
+font-size:5vh;
+display:inline-block;
+}
+
+#atariSpSelectButton{
+opacity:var(--atariSpSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#voidollSpSelectButton{
+opacity:var(--voidollSpSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#nikolaSpSelectButton{
+opacity:var(--nikolaSpSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#nohoAtSelectButton{
+opacity:var(--nohoAtSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#tadaomiAtSelectButton{
+opacity:var(--tadaomiAtSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#lucianoAtSelectButton{
+opacity:var(--lucianoAtSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#lyricaGuSelectButton{
+opacity:var(--lyricaGuSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#matoiGuSelectButton{
+opacity:var(--matoiGuSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#justiceTaSelectButton{
+opacity:var(--justiceTaSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#jeanneTaSelectButton{
+opacity:var(--jeanneTaSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+#marcosTaSelectButton{
+opacity:var(--marcosTaSelectButton);
+width:100%;
+height:auto;
+margin-bottom:5%;
+backGround:#ffffff;
+}
+
+.buttonB{
+position:absolute;
+bottom:5%;
+right:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#partySelectDecision{
+position:absolute;
+bottom:5%;
+right:3%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+.buttonA{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#partySelectDecisionButton{
+position:absolute;
+opacity:var(--partySelectDecisionButton);
+bottom:5%;
+right:3%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#checkBeforeBattleQuestion{
+position:absolute;
+top:20%;
+left:20%;
+width:60%;
+height:60%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#checkBeforeBattleYes{
+position:absolute;
+top:60%;
+left:30%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#checkBeforeBattleYesButton{
+position:absolute;
+opacity:var(--checkBeforeBattleYesButton);
+top:60%;
+left:30%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#checkBeforeBattleNo{
+position:absolute;
+top:60%;
+right:30%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#checkBeforeBattleNoButton{
+position:absolute;
+opacity:var(--checkBeforeBattleNoButton);
+top:60%;
+right:30%;
+width:15%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#checkBeforeBattleBox{
+position:absolute;
+width:100%;
+height:100%;
+z-index:-60;
+}
+
+#gameStartCount3{
+opacity:var(--gameStartCount3);
+position:absolute;
+left:0%;
+top:0%;
+width:100%;
+height:100%;
+}
+
+#gameStartCount2{
+opacity:var(--gameStartCount2);
+position:absolute;
+left:0%;
+top:0%;
+width:100%;
+height:100%;
+}
+
+#gameStartCount1{
+opacity:var(--gameStartCount1);
+position:absolute;
+left:0%;
+top:0%;
+width:100%;
+height:100%;
+}
+
+
+#gameStartCount0{
+opacity:var(--gameStartCount0);
+position:absolute;
+left:0%;
+top:0%;
+width:100%;
+height:100%;
+}
+
+#clearResultScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#heroList{
+position:absolute;
+top:20%;
+left:2%;
+height:70%;
+width:50%;
+overflow:auto;
+border-radius:3%;
+backGround:var(--homeColor);
+}
+
+#heroStatusDetail{
+position:absolute;
+top:5%;
+left:54%;
+height:90%;
+width:45%;
+overflow:auto;
+border-radius:3%;
+backGround:var(--homeColor);
+}
+
+.heroStatusIcon{
+width:16%;
+margin:2%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#heroStatusDetailImg{
+position:absolute;
+top:2%;
+left:35%;
+width:30%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#heroStatusDetailName{
+position:absolute;
+top:32%;
+left:10%;
+width:80%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#heroStatusDetailLv{
+position:absolute;
+top:50%;
+left:2%;
+width:20%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#heroStatusDetailLvN{
+position:absolute;
+top:50%;
+left:24%;
+width:70%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#heroStatusDetailSkill1{
+position:absolute;
+top:62%;
+left:2%;
+width:20%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#heroStatusDetailSkill1Name{
+position:absolute;
+top:62%;
+left:24%;
+width:70%;
+height:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#getItemBack{
+position:absolute;
+top:2%;
+left:30%;
+height:10%;
+width:40%;
+}
+
+#getBMBack{
+position:absolute;
+top:33%;
+left:30%;
+height:10%;
+width:40%;
+}
+
+#clearResultBM{
+ top:30%;
+ height:5vh;
+}
+
+#getItemBase{
+position:absolute;
+top:15%;
+left:45.85%;
+height:15%;
+width:8.25%;
+margin-top:0%;
+margin-botton:0%;
+}
+
+#firstClearBase{
+position:absolute;
+bottom:2%;
+left:30%;
+height:30%;
+width:40%;
+margin-top:0%;
+margin-bottom:0%;
+}
+
+#firstClear{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+}
+
+#firstClearImg{
+position:relative;
+top:0%;
+margin:0 auto;
+height:50%;
+}
+
+#spExperienceBase{
+position:absolute;
+top:45%;
+right:71%;
+height:20%;
+width:18%;
+margin-top:0%;
+margin-bottom:0%;
+backGround:var(--homeColor);
+}
+
+#atExperienceBase{
+position:absolute;
+top:45%;
+right:51%;
+height:20%;
+width:18%;
+margin-top:0%;
+margin-bottom:0%;
+backGround:var(--homeColor);
+}
+
+#guExperienceBase{
+position:absolute;
+top:45%;
+left:51%;
+height:20%;
+width:18%;
+margin-top:0%;
+margin-bottom:0%;
+backGround:var(--homeColor);
+}
+
+#taExperienceBase{
+position:absolute;
+top:45%;
+left:71%;
+height:20%;
+width:18%;
+margin-top:0%;
+margin-bottom:0%;
+backGround:var(--homeColor);
+}
+
+.experienceResult1{
+position:absolute;
+left:35%;
+width:30%;
+}
+
+.experienceResult2{
+position:absolute;
+bottom:0%;
+width:100%;
+font-size:5vh;
+text-align: center;
+color: #ffffff;
+backGround:var(--homeColor);
+}
+
+#clearResultToHome{
+position:absolute;
+bottom:5%;
+right:3%;
+width:25%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+#clearResultToHomeButton{
+position:absolute;
+opacity:var(--clearResultToHomeButton);
+bottom:5%;
+right:3%;
+width:25%;
+height:10%;
+border-radius:10%;
+backGround:#ffffff;
+}
+
+.clearResultToHomeB{
+position:absolute;
+bottom:5%;
+right:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+font-size:5vh;
+text-align: center;
+color: var(--homeColor);
+backGround:#ffffff;
+}
+
+.clearResultToHomeA{
+position:absolute;
+top:5%;
+left:5%;
+width:90%;
+height:90%;
+border-radius:10%;
+backGround:var(--homeColor);
+}
+
+#stageSelectScreen{
+position:absolute;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#partyBack{
+position:absolute;
+height:100%;
+z-index:-60;
+}
+
+#partySelect{
+position:absolute;
+height:80%;
+top:20%;
+width:90%;
+left:5%;
+z-index:-60;
+}
+
+.selectBack{
+position:relative;
+height:10%;
+margin-top:3%;
+background:#8da4c4;
+}
+
+.party{
+position:relative;
+height:100%;
+padding-left:5%;
+}
+
+#partyDec{
+position:absolute;
+opacity:var(--partyDec);
+top:85%;
+right:2%;
+height:10%;
+animation: partyAni1 2s 0s infinite;
+z-index:-60;
+}
+
+@keyframes partyAni1{
+0%{
+height:10%;
+}
+50%{
+height:var(--partyAnima);
+}
+100%{
+height:10%;
+}
+}
+
+#partySelectScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+.gameBack{
+position:absolute;
+height:100%;
+top:0%;
+z-index:-60;
+}
+
+.gameFront{
+position:absolute;
+height:100%;
+top:0%;
+left:0%;
+}
+
+#gameButton{
+position:absolute;
+height:100%;
+top:0%;
+}
+
+#cover{
+position:absolute;
+height:100%;
+width:100%;
+top:0%;
+z-index:-60;
+}
+
+#toLeft{
+position:absolute;
+top:0%;
+left:0%;
+width:8%;
+height:100%;
+}
+
+#toRight{
+position:absolute;
+top:0%;
+left:8%;
+width:8%;
+height:100%;
+}
+
+#ataBut{
+position:absolute;
+top:0%;
+right:0%;
+width:16%;
+height:33%;
+}
+
+#gunBut{
+position:absolute;
+top:33%;
+right:0%;
+width:16%;
+height:34%;
+}
+
+#tanBut{
+position:absolute;
+top:67%;
+right:0%;
+width:16%;
+height:33%;
+}
+
+#heroMoveId{
+position:absolute;
+left:0%;
+top:0%;
+width:16%;
+height:100%;
+}
+
+#pushToLeft{
+position:absolute;
+opacity:var(--pushToLeft);
+top:0%;
+left:0%;
+width:8%;
+height:100%;
+background:#000000;
+}
+
+#pushToRight{
+position:absolute;
+opacity:var(--pushToRight);
+top:0%;
+left:8%;
+width:8%;
+height:100%;
+background:#000000;
+}
+
+#pushAtaBut{
+position:absolute;
+opacity:var(--pushAtaBut);
+top:0%;
+right:0%;
+width:16%;
+height:33%;
+background:#000000;
+}
+
+#pushGunBut{
+position:absolute;
+opacity:var(--pushGunBut);
+top:33%;
+right:0%;
+width:16%;
+height:34%;
+background:#000000;
+}
+
+#pushTanBut{
+position:absolute;
+opacity:var(--pushTanBut);
+top:67%;
+right:0%;
+width:16%;
+height:33%;
+background:#000000;
+}
+
+
+#field{
+position:relative;
+width:68%;
+height:77%;
+width:68%;
+left:16%;
+top:0%;
+margin-top:0px;
+margin-bottom:0px;
+}
+
+#selectedSp{
+position:absolute;
+width:10%;
+height:100%;
+margin-top:0px;
+margin-bottom:0px;
+z-index:-60;
+}
+
+#selectedAt{
+position:absolute;
+top:0%;
+right:0%;
+width:16%;
+height:33%;
+margin:0 auto;
+}
+
+#selectedGu{
+position:absolute;
+top:33%;
+right:0%;
+width:16%;
+height:33%;
+margin:0 auto;
+}
+
+#selectedTa{
+position:absolute;
+top:67%;
+right:0%;
+width:16%;
+height:33%;
+margin-top:0;
+margin-bottom:0;
+}
+
+#spDef{
+position:absolute;
+bottom:0%;
+width:100%;
+left:0%;
+z-index:20;
+}
+
+#atDef{
+position:absolute;
+transform: scale(-1, 1);
+width:80%;
+margin:0 auto;
+z-index:-60;
+}
+
+#guDef{
+position:absolute;
+transform: scale(-1, 1);
+width:80%;
+margin:0 auto;
+z-index:-60;
+}
+
+#taDef{
+position:absolute;
+transform: scale(-1, 1);
+width:80%;
+margin:0 auto;
+z-index:-60;
+}
+
+/*メカ反Start*/
+#mekahanScreen{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+z-index:-60;
+}
+
+#mekahanSet{
+position:absolute;
+opacity:var(--mekahanSet);
+overflow:hidden;
+top:0%;
+width:68%;
+height:100%;
+display: block;
+left:var(--mekahanSetSide);
+z-index:-60;
+}
+#mekahanBody{
+position:absolute;
+opacity:var(--mekahanOpacity1);
+left:18%;
+height:100%;
+top:0%;
+}
+#mekahanHand{
+position:absolute;
+opacity:var(--mekahanOpacity1);
+width:80%;
+left:var(--mekahanHandSide);
+top:var(--mekahanHandLength);
+}
+#mekahanBodyAttack1{
+position:absolute;
+opacity:var(--mekahanOpacity2);
+left:-7%;
+width:100%;
+top:-15%;
+}
+#mekahanBodyAttack2{
+position:absolute;
+opacity:var(--mekahanOpacity3);
+left:-7%;
+width:100%;
+top:78%;
+}
+#mekahanBodyAttack3{
+position:absolute;
+opacity:var(--mekahanOpacity5);
+right:-7%;
+width:100%;
+top:-15%;
+}
+#mekahanBodyAttack4{
+position:absolute;
+opacity:var(--mekahanOpacity6);
+right:-7%;
+width:100%;
+top:78%;
+}
+#mekahanJet{
+position:absolute;
+opacity:var(--mekahanOpacity4);
+overflow:hidden;
+left:0%;
+top:0%;
+height:100%;
+z-index:-60;
+}
+.mekahanAttack1{
+animation: mekahanAttack1 3s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes mekahanAttack1{
+0%{
+left:18%;
+}
+5%{
+left:9%;
+}
+69%{
+left:9%;
+}
+100%{
+left:18%;
+}
+}
+.mekahanHandAttack1{
+animation: mekahanHandAttack1 3s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes mekahanHandAttack1{
+0%{
+top:52%;
+left:10%;
+}
+5%{
+top:52%;
+left:0%;
+}
+32%{
+top:45%;
+left:0%;
+}
+34%{
+top:63%;
+left:0%;
+}
+67%{
+top:63%;
+left:0%;
+}
+69%{
+top:52%;
+left:0%;
+}
+100%{
+top:52%;
+left:10%;
+}
+}
+.mekahanAttack2{
+animation: mekahanAttack2 3s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes mekahanAttack2{
+0%{
+left:18%;
+}
+5%{
+left:27%;
+}
+69%{
+left:27%;
+}
+100%{
+left:18%;
+}
+}
+.mekahanHandAttack2{
+animation: mekahanHandAttack2 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes mekahanHandAttack2{
+0%{
+top:52%;
+left:10%;
+}
+5%{
+top:52%;
+left:20%;
+}
+32%{
+top:45%;
+left:20%;
+}
+34%{
+top:63%;
+left:20%;
+}
+67%{
+top:63%;
+left:20%;
+}
+69%{
+top:52%;
+left:20%;
+}
+100%{
+top:52%;
+left:10%;
+}
+}
+.mekahanAttack3{
+animation: mekahanAttack3 10s 0s 1;
+animation-fill-mode:backwards;
+animation-timing-function: linear;
+}
+
+@keyframes mekahanAttack3{
+0%{
+top:0%;
+}
+20%{
+top:-112.5%;
+}
+25%{
+top:-70%;
+}
+40%{
+top:-70%;
+}
+45%{
+top:0%;
+}
+60%{
+top:0%;
+}
+80%{
+top:-112.5%;
+}
+100%{
+top:0%;
+}
+}
+.mekahanAttackJet{
+animation: mekahanAttackJet 10s 0s 1;
+animation-fill-mode:backwards;
+animation-timing-function: linear;
+}
+@keyframes mekahanAttackJet{
+0%{
+top:0%;
+}
+2%{
+top:0%;
+}
+20%{
+top:-100%;
+}
+80%{
+top:-100%;
+}
+98%{
+top:0%;
+}
+}
+.mekahanAttack5{
+animation: mekahanAttack5 5s 0s 1;
+animation-fill-mode:backwards;
+animation-timing-function: linear;
+}
+@keyframes mekahanAttack5{
+0%{
+opacity:0;
+}
+20%{
+opacity:1;
+}
+80%{
+opacity:1;
+}
+100%{
+opacity:0;
+}
+}
+.mekahanAttack6{
+animation: mekahanAttack6 3s 0s 1;
+animation-fill-mode:forwards;
+animation-timing-function: linear;
+}
+@keyframes mekahanAttack6{
+0%{
+opacity:0;
+bottom:18.5%;
+}
+33%{
+opacity:1;
+bottom:18.5%;
+}
+67%{
+opacity:1;
+bottom:0%;
+}
+99%{
+opacity:1;
+bottom:0%;
+}
+100%{
+opacity:0;
+bottom:0%;
+}
+}
+.mekahanAttack7{
+animation: mekahanAttack7 1s 0s 1;
+animation-fill-mode:forwards;
+animation-timing-function: linear;
+}
+@keyframes mekahanAttack7{
+0%{
+opacity:1;
+}
+100%{
+opacity:0;
+}
+}
+#mekahanHole1{
+position:absolute;
+left:16%;
+top:54%;
+height:10%;
+opacity:var(--mekahanOpacity7);
+}
+#mekahanHole2{
+position:absolute;
+right:16%;
+top:54%;
+height:10%;
+opacity:var(--mekahanOpacity7);
+}
+#miniMekahanField{
+opacity:var(--miniMekahanField);
+position:absolute;
+width:68%;
+height:77%;
+top:0%;
+left:16%;
+z-index:-60;
+}
+#miniMekahanA1{
+position:absolute;
+opacity:0;
+width:5%;
+bottom:18.5%;
+left:17.5%;
+}
+#miniMekahanA2{
+position:absolute;
+opacity:0;
+width:5%;
+bottom:18.5%;
+right:17.5%;
+}
+#miniMekahanB1{
+position:absolute;
+transform: scale(var(--miniMekahan1), 1);
+opacity:var(--mekahanOpacity8);
+width:5%;
+bottom:0%;
+left:var(--miniMekahanSide);
+}
+#miniMekahanB2{
+position:absolute;
+transform: scale(var(--miniMekahan2), 1);
+opacity:var(--mekahanOpacity8);
+width:5%;
+bottom:0%;
+right:var(--miniMekahanSide);
+}
+#mekahanEndingSet{
+position:absolute;
+opacity:var(--mekahanEndingSet);
+overflow:hidden;
+top:0%;
+width:68%;
+height:100%;
+display: block;
+left:16%;
+}
+#mekahanEndingBody{
+position:absolute;
+left:18%;
+height:100%;
+top:0%;
+}
+#mekahanEndingHand{
+position:absolute;
+width:80%;
+left:10%;
+top:52%;
+}
+#EndingExplosion1{
+position:absolute;
+opacity:var(--EndingExplosion1);
+top:25%;
+left:40%;
+height:20%;
+}
+#EndingExplosion2{
+position:absolute;
+opacity:var(--EndingExplosion2);
+top:45%;
+left:60%;
+height:15%;
+}
+#EndingExplosion3{
+position:absolute;
+opacity:var(--EndingExplosion3);
+top:60%;
+left:35%;
+height:25%;
+}
+#enemyNatadecoco1{
+position:absolute;
+opacity:var(--enemyNatadecoco1);
+top:0%;
+left:0%;
+height:100%;
+}
+#enemyNatadecoco2{
+position:absolute;
+opacity:var(--enemyNatadecoco2);
+top:0%;
+left:0%;
+height:100%;
+}
+#enemyNatadecoco3{
+position:absolute;
+opacity:var(--enemyNatadecoco3);
+top:0%;
+left:0%;
+height:100%;
+}
+
+/*メカ反End*/
+/*グラナート*/
+
+#granatScreen{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#granatSet{
+position:absolute;
+opacity:var(--granatSet);
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+}
+
+#granatA{
+position:absolute;
+top:35%;
+left:43.35%;
+height:30%;
+width:13.3%;
+}
+#granatB{
+position:absolute;
+top:35%;
+left:43.35%;
+height:30%;
+width:13.3%;
+}
+#granatC{
+position:absolute;
+top:35%;
+left:43.35%;
+height:30%;
+width:13.3%;
+}
+#granatD{
+position:absolute;
+top:35%;
+left:43.35%;
+height:30%;
+width:13.3%;
+}
+
+#granatIcicleSet1{
+position:absolute;
+opacity:var(--granatIcicle1);
+overflow:hidden;
+top:0%;
+width:68%;
+height:100%;
+display: block;
+left:16%;
+}
+
+.granatIcicleAni{
+animation: granatIcicleAni 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatIcicleAni{
+0%  {height:0%;}
+1%  {height:5%;}
+49% {height:5%;}
+50% {height:20%;}
+65% {height:20%;}
+66% {height:0%;}
+100%{height:0%;}
+}
+
+.granatAta1aAni{
+animation: granatAta1aAni 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta1aAni{
+0%  {top:35%;}
+1%  {top:40%;}
+49% {top:40%;}
+50% {top:33%;}
+65% {top:33%;}
+66% {top:35%;}
+100%{top:35%;}
+}
+
+.granatAta1bAni{
+animation: granatAta1bAni 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta1bAni{
+0%  {top:35%;}
+1%  {top:38%;}
+49% {top:38%;}
+50% {top:34%;}
+65% {top:34%;}
+66% {top:35%;}
+100%{top:35%;}
+}
+
+.granatAta2aAni{
+animation: granatAta2aAni 5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta2aAni{
+0%  {top:35%;}
+5%  {top:39%;}
+10% {top:39%;left:43.35%;width:13.3%;height:30%;}
+25% {top:10%;}//最高点
+35% {top:39%;}
+40% {top:27.4%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+60% {top:27.4%;}
+65% {top:32%;}
+70% {top:32%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+85% {top:10%;}//最高点
+95% {top:39%;left:43.35%;width:13.3%;height:30%;}
+100%{top:35%;}
+}
+
+.granatAta2bAni{
+animation: granatAta2bAni 5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta2bAni{
+0%  {top:35%;}
+5%  {top:38%;}
+10% {top:38%;left:43.35%;width:13.3%;height:30%;}
+25% {top:12%;}//最高点
+35% {top:38%;}
+40% {top:27.4%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+60% {top:27.4%;}
+65% {top:30%;}
+70% {top:30%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+85% {top:12%;}//最高点
+95% {top:38%;left:43.35%;width:13.3%;height:30%;}
+100%{top:35%;}
+}
+
+.granatAta2cAni{
+animation: granatAta2cAni 5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta2cAni{
+0%  {top:35%;}
+5%  {top:35%;}
+10% {top:35%;left:43.35%;width:13.3%;height:30%;}
+25% {top: 8%;}//最高点
+35% {top:35%;}
+40% {top:27.4%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+60% {top:27.4%;}
+65% {top:27.4%;}
+70% {top:27.4%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+85% {top: 8%;}//最高点
+95% {top:35%;left:43.35%;width:13.3%;height:30%;}
+100%{top:35%;}
+}
+
+.granatAta2dAni{
+animation: granatAta2dAni 5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta2dAni{
+0%  {top:35%;}
+5%  {top:35%;}
+10% {top:35%;left:43.35%;width:13.3%;height:30%;}
+25% {top:15%;}//最高点
+35% {top:35%;}
+40% {top:30%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+60% {top:30%;}
+65% {top:30%;}
+70% {top:30%;left:var(--granatAta2Ani);width:22%;height:49.62%;}
+85% {top:15%;}//最高点
+95% {top:35%;left:43.35%;width:13.3%;height:30%;}
+100%{top:35%;}
+}
+
+.granatAta4aAni{
+animation: granatAta4aAni 2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta4aAni{
+0%  {top:35%;}
+25% {top:40%;}
+49% {top:40%;}
+50% {top:31%;}
+75% {top:31%;}
+100%{top:35%;}
+}
+
+.granatAta4bAni{
+animation: granatAta4bAni 2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta4bAni{
+0%  {top:35%;}
+25% {top:38%;}
+49% {top:38%;}
+50% {top:33%;}
+75% {top:33%;}
+100%{top:35%;}
+}
+
+.granatAta4cAni{
+animation: granatAta4cAni 2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes granatAta4cAni{
+0%  {opacity:0;left:47.25%;bottom:50%;}
+25% {left:47.25%;}
+49% {opacity:0.8;}
+50% {left:47.25%;bottom:50%;}
+75% {left:var(--granatAta2Ani);bottom:23%;}
+99% {opacity:0.8;}
+100%{opacity:0;left:var(--granatAta2Ani);bottom:23%;}
+}
+
+
+#granatIcicle1{
+position:absolute;
+bottom:23%;
+left:0%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle2{
+position:absolute;
+bottom:23%;
+left:20%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle3{
+position:absolute;
+bottom:23%;
+left:40%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle4{
+position:absolute;
+bottom:23%;
+left:60%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle5{
+position:absolute;
+bottom:23%;
+left:80%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle6{
+position:absolute;
+bottom:23%;
+left:10%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle7{
+position:absolute;
+bottom:23%;
+left:30%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle8{
+position:absolute;
+bottom:23%;
+left:50%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle9{
+position:absolute;
+bottom:23%;
+left:70%;
+width:10%;
+height:0%;
+}
+
+#granatIcicle10{
+position:absolute;
+bottom:23%;
+left:90%;
+width:10%;
+height:0%;
+}
+
+#granatBullet{
+position:absolute;
+opacity:0;
+bottom:50%;
+left:47.25%;
+height:10%;
+width:5.5%;
+border-radius:50%;
+backGround:#e2eef5;
+}
+
+#granatEndingSet{
+position:absolute;
+opacity:var(--granatEndingSet);
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+/*リベルル*/
+
+#libeluluScreen{
+position:absolute;
+top:0%;
+left:16%;
+width:68%;
+height:100%;
+}
+
+#libeluluSet{
+position:absolute;
+width:100%;
+height:100%;
+opacity:var(--libeluluSet);
+}
+
+#libeluluEndingSet{
+position:absolute;
+opacity:var(--libeluluEndingSet);
+width:10%;
+top:40%;
+left:45%;
+}
+
+#libeluluGameBack{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#libeluluGameFront{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#libeluluImgBase{
+position:absolute;
+width:10%;
+height:12%;
+transform: scale(var(--libeluluDirection), 1);
+top:var(--libeluluTop);
+left:var(--libeluluLeft);
+}
+
+#libeluluImg{
+position:absolute;
+width:100%;
+}
+
+#libeluluFlash{
+position:absolute;
+opacity:0;
+width:100%;
+height:100%;
+backGround:#ff58f4;
+border-radius:50%;
+}
+
+.libeluluFrashAni{
+animation: libeluluFrashAni 0.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluFrashAni{
+0%  {opacity:0;}
+50% {opacity:1;}
+100%{opacity:0;}
+}
+
+
+#libeluluAttackEffect1{
+position:absolute;
+overflow:hidden;
+opacity:0;
+backGround:#ff58f4;
+border-radius:50%;
+width:10%;
+height:12%;
+left:45%;
+top:60%;
+}
+
+.libeluluAttackEffect1Ani{
+animation: libeluluAttackEffect1Ani 5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect1Ani{
+0%  {opacity:0;   top:60%;left:45%;height:12%;width:10%;}
+40% {opacity:0.5; top:35%;left:10%;height:96%;width:80%;}
+55% {opacity:0.5}
+60% {opacity:1;   top:35%;left:10%;height:96%;width:80%;}
+61% {opacity:0;   top:60%;left:45%;height:12%;width:10%;}
+100%{opacity:0;}
+}
+
+.libeluluAttackEffect2aAni{
+animation: libeluluAttackEffect2aAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect2aAni{
+0%  {opacity:0;   top:40%;left:15%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+25% {opacity:1;   top:40%;left:15%;height:12%;width:10%;}
+37.5% {opacity:1; top:40%;left:15%;height:12%;width:10%;}
+43.75% {          top:65%;left:var(--libeluluAttackEffect2aAni);height:12%;width:10%;}
+50% {opacity:0;}
+100%{opacity:0;   top:40%;left:15%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+}
+
+.libeluluAttackEffect2bAni{
+animation: libeluluAttackEffect2bAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect2bAni{
+0%  {opacity:0;   top:40%;left:25%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+25% {opacity:1;   top:40%;left:25%;height:12%;width:10%;}
+43.75% {opacity:1;top:40%;left:25%;height:12%;width:10%;}
+50% {             top:65%;left:var(--libeluluAttackEffect2bAni);height:12%;width:10%;}
+56.25% {opacity:0;}
+100%{opacity:0;   top:40%;left:25%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+}
+
+.libeluluAttackEffect2cAni{
+animation: libeluluAttackEffect2cAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect2cAni{
+0%  {opacity:0;   top:40%;left:35%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+25% {opacity:1;   top:40%;left:35%;height:12%;width:10%;}
+50% {opacity:1;   top:40%;left:35%;height:12%;width:10%;}
+56.25% {          top:65%;left:var(--libeluluAttackEffect2cAni);height:12%;width:10%;}
+62.5% {opacity:0;}
+100%{opacity:0;   top:40%;left:35%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+}
+
+.libeluluAttackEffect2dAni{
+animation: libeluluAttackEffect2dAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect2dAni{
+0%  {opacity:0;   top:40%;left:55%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+25% {opacity:1;   top:40%;left:55%;height:12%;width:10%;}
+56.25% {opacity:1;top:40%;left:55%;height:12%;width:10%;}
+62.5% {           top:65%;left:var(--libeluluAttackEffect2dAni);height:12%;width:10%;}
+68.75% {opacity:0;}
+100%{opacity:0;   top:40%;left:55%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+}
+
+.libeluluAttackEffect2eAni{
+animation: libeluluAttackEffect2eAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect2eAni{
+0%  {opacity:0;   top:40%;left:65%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+25% {opacity:1;   top:40%;left:65%;height:12%;width:10%;}
+62.5% {opacity:1; top:40%;left:65%;height:12%;width:10%;}
+68.75% {          top:65%;left:var(--libeluluAttackEffect2eAni);height:12%;width:10%;}
+75% {opacity:0;}
+100%{opacity:0;   top:40%;left:65%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+}
+
+.libeluluAttackEffect2fAni{
+animation: libeluluAttackEffect2fAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect2fAni{
+0%  {opacity:0;   top:40%;left:75%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+25% {opacity:1;   top:40%;left:75%;height:12%;width:10%;}
+68.75% {opacity:1;top:40%;left:75%;height:12%;width:10%;}
+75% {             top:65%;left:var(--libeluluAttackEffect2fAni);height:12%;width:10%;}
+81.25% {opacity:0;}
+100%{opacity:0;   top:40%;left:75%;height:12%;width:10%;backGround:#ff58f4;border-radius:50%;}
+}
+
+#libeluluAttackEffect2a{position:absolute;}
+#libeluluAttackEffect2b{position:absolute;}
+#libeluluAttackEffect2c{position:absolute;}
+#libeluluAttackEffect2d{position:absolute;}
+#libeluluAttackEffect2e{position:absolute;}
+#libeluluAttackEffect2f{position:absolute;}
+
+#libeluluAttackEffect3{
+position:absolute;
+top:71%;
+width:80%;
+height:0%;
+left:var(--libeluluAttackEffect3);
+backGround:#ff58f4;
+}
+
+.libeluluAttackEffect3Ani{
+animation: libeluluAttackEffect3Ani 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes libeluluAttackEffect3Ani{
+0%  {height:0%top:71%;}
+17% {height:1%;top:71%;}
+33% {height:1%;top:71%;}
+34% {height:15%;top:65%;}
+66% {height:15%;top:65%;}
+100%{height:0%;top:71%;}
+}
+
+/*喰色*/
+
+#kuiroScreen{
+position:absolute;
+top:0%;
+left:16%;
+width:68%;
+height:100%;
+}
+
+#kuiroSet{
+position:absolute;
+opacity:var(--kuiroSet);
+top:0%;
+width:100%;
+height:100%;
+}
+
+.kuiroBeamaAni{
+animation: kuiroBeamaAni 5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroBeamaAni{
+0%  {opacity:0;}
+20% {opacity:0.2;}
+39% {opacity:0.2;}
+40% {opacity:1;}
+90% {opacity:1;}
+100%{opacity:0;}
+}
+
+.kuiroAttack1aAni{
+animation: kuiroAttack1aAni 2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroAttack1aAni{
+0%  {left:var(--kuiroTanukiSet);}
+100%{left:24%;}
+}
+
+.kuiroAttack2aAni{
+animation: kuiroAttack2aAni 2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroAttack2aAni{
+0%  {left:var(--kuiroTanukiSet);}
+100%{left:-9%;}
+}
+
+.kuiroAttack3aAni{
+animation: kuiroAttack3aAni 2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroAttack3aAni{
+0%  {left:var(--kuiroTanukiSet);}
+100%{left:57%;}
+}
+
+.kuiroFrashAni{
+animation: kuiroFrashAni 0.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroFrashAni{
+0%  {opacity:0;}
+50% {opacity:1;}
+100%{opacity:0;}
+}
+
+#kuiroEndingSet{
+position:absolute;
+opacity:var(--kuiroEndingSet);
+width:100%;
+top:0%;
+left:0%;
+}
+
+#kuiroGameBack{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#kuiroGameFront{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#kuiroTanukiSet{
+position:absolute;
+left:var(--kuiroTanukiSet);
+top:15%;
+}
+
+#kuiroHitoSet{
+position:absolute;
+transform: scale(var(--kuiroDirection), 1);
+bottom:25%;
+left:var(--kuiroHitoSet);
+width:10%;
+height:12%;
+}
+
+#kuiroHeal{
+position:absolute;
+opacity:0;
+height:100%;
+width:100%;
+border-radius:50%;
+backGround:#35ff8a;
+}
+
+#kuiroAta1{
+position:absolute;
+bottom:35%;
+width:30%;
+right:35%;
+}
+
+#kuiroAta2{
+position:absolute;
+bottom:35%;
+width:30%;
+right:35%;
+}
+
+#kuiroAta3{
+position:absolute;
+bottom:35%;
+width:30%;
+right:35%;
+}
+
+.kuiroHitoMoveAni{
+animation: kuiroHitoMoveAni 1s 0s 1;
+animation-fill-mode:forwards;
+animation-easing:linear;
+}
+
+@keyframes kuiroHitoMoveAni{
+0%  {left:var(--kuiroHitoSet);}
+100%{left:var(--kuiroHitoMoveAni);}
+}
+
+.kuiroAttack4aAni{
+animation: kuiroAttack4aAni 2.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroAttack4aAni{
+0%  {right:35%;width:30%;bottom:35%;}
+20%{right:100%;width:30%;bottom:35%;}
+39%{right:100%;width:30%;bottom:35%;}
+40%{right:100%;width:100%;bottom:0%;}
+60%{right:100%;width:100%;bottom:0%;}
+80%{right:100%;width:30%;}
+100%{right:35%;width:30%;bottom:35%;}
+}
+
+.kuiroAttack4bAni{
+animation: kuiroAttack4bAni 2.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroAttack4bAni{
+0%  {right:35%;width:30%;bottom:35%;}
+20%{right:200%;width:30%;bottom:35%;}
+39%{right:200%;width:30%;bottom:35%;}
+40%{right:200%;width:100%;bottom:0%;}
+60%{right:200%;width:100%;bottom:0%;}
+80%{right:200%;width:30%;}
+100%{right:35%;width:30%;bottom:35%;}
+}
+
+.kuiroAttack4cAni{
+animation: kuiroAttack4cAni 2.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes kuiroAttack4cAni{
+0%  {right:35%;width:30%;bottom:35%;}
+20%{right:300%;width:30%;bottom:35%;}
+39%{right:300%;width:30%;bottom:35%;}
+40%{right:300%;width:100%;bottom:0%;}
+60%{right:300%;width:100%;bottom:0%;}
+80%{right:300%;width:30%;}
+100%{right:35%;width:30%;bottom:35%;}
+}
+
+/*ゆらら*/
+#yuraraScreen{
+position:absolute;
+top:0%;
+left:16%;
+width:68%;
+height:100%;
+}
+
+#yuraraSet{
+position:absolute;
+opacity:var(--yuraraSet);
+top:0%;
+width:100%;
+height:100%;
+}
+
+#yuraraImgBase{
+position:absolute;
+width:10%;
+height:12%;
+transform: scale(var(--yuraraDirection), 1);
+top:var(--yuraraTop);
+left:var(--yuraraLeft);
+}
+
+#yuraraImg{
+position:absolute;
+width:100%;
+}
+
+#yuraraFlash{
+position:absolute;
+opacity:0;
+width:100%;
+}
+
+#yuraraAttack1{
+position:absolute;
+width:100%;
+top:0%;
+left:100%;
+}
+
+#yuraraEndingSet{
+position:absolute;
+opacity:var(--yuraraEndingSet);
+top:40%;
+left:45%;
+width:10%;
+}
+
+.gameBack{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+}
+
+.gameFront{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#yuraraAttack2{
+position:absolute;
+top:0%;
+height:100%;
+width:0%;
+left:12.5%;
+}
+
+.yuraraAttack2Ani{
+animation: yuraraAttack2Ani 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes yuraraAttack2Ani{
+0%{width:0%;left:12.5%;}
+17%{width:2%;left:11.5%;}
+33%{width:2%;left:11.5%;}
+34%{width:5%;left:10%;}
+66%{width:5%;left:10%;}
+100%{width:0%;left:12.5%;}
+}
+
+#yuraraAttack3{
+position:absolute;
+top:0%;
+height:100%;
+width:0%;
+left:32.5%;
+}
+
+.yuraraAttack3Ani{
+animation: yuraraAttack3Ani 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes yuraraAttack3Ani{
+0%{width:0%;left:32.5%;}
+17%{width:2%;left:31.5%;}
+33%{width:2%;left:31.5%;}
+34%{width:5%;left:30%;}
+66%{width:5%;left:30%;}
+100%{width:0%;left:32.5%;}
+}
+
+#yuraraAttack4{
+position:absolute;
+top:0%;
+height:100%;
+width:0%;
+left:67.5%;
+}
+
+.yuraraAttack4Ani{
+animation: yuraraAttack4Ani 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes yuraraAttack4Ani{
+0%{width:0%;left:67.5%;}
+17%{width:2%;left:66.5%;}
+33%{width:2%;left:66.5%;}
+34%{width:5%;left:65%;}
+66%{width:5%;left:65%;}
+100%{width:0%;left:67.5%;}
+}
+
+#yuraraAttack5{
+position:absolute;
+top:0%;
+height:100%;
+width:0%;
+left:87.5%;
+}
+
+.yuraraAttack5Ani{
+animation: yuraraAttack5Ani 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes yuraraAttack5Ani{
+0%{width:0%;left:87.5%;}
+17%{width:2%;left:86.5%;}
+33%{width:2%;left:86.5%;}
+34%{width:5%;left:85%;}
+66%{width:5%;left:85%;}
+100%{width:0%;left:87.5%;}
+}
+
+#yuraraParturitionBase1{
+position:absolute;
+transform: scale(var(--yuraraParturitionBase1), 1);
+width:10%;
+height:12%;
+top:40%;
+left:25%;
+}
+
+#yuraraParturition1{
+position:absolute;
+opacity:0;
+width:100%;
+top:0%;
+left:0%;
+}
+
+#yuraraParturitionFlash1{
+position:absolute;
+opacity:0;
+width:100%;
+top:0%;
+left:0%;
+}
+
+.yuraraParturition1Ani{
+animation: yuraraParturition1Ani 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes yuraraParturition1Ani{
+0%{left:25%;top:40%;}
+100%{left:var(--yuraraParturition1Ani);top:65%;}
+}
+
+#yuraraParturitionBase2{
+position:absolute;
+transform: scale(var(--yuraraParturitionBase2), 1);
+width:10%;
+height:12%;
+top:40%;
+left:65%;
+}
+
+#yuraraParturition2{
+position:absolute;
+opacity:0;
+width:100%;
+top:0%;
+left:0%;
+}
+
+#yuraraParturitionFlash2{
+position:absolute;
+opacity:0;
+width:100%;
+top:0%;
+left:0%;
+}
+
+.yuraraParturition2Ani{
+animation: yuraraParturition2Ani 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes yuraraParturition2Ani{
+0%{left:65%;top:40%;}
+100%{left:var(--yuraraParturition1Ani);top:65%;}
+}
+
+/*ケルベロス*/
+
+#cerberusScreen{
+position:absolute;
+top:0%;
+left:16%;
+width:68%;
+height:100%;
+}
+
+#cerberusSet{
+position:absolute;
+opacity:var(--cerberusSet);
+top:0%;
+width:100%;
+height:100%;
+}
+
+#cerberusImgBase{
+position:absolute;
+left:0%;
+height:100%;
+width:100%;
+}
+
+#cerberusImg{
+position:absolute;
+left:30%;
+width:40%;
+bottom:33%;
+}
+
+#cerberusEndingSet{
+position:absolute;
+opacity:var(--cerberusEndingSet);
+width:36%;
+bottom:27%;
+left:34%;
+}
+
+#cerberusAttackA{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+width:100%;
+}
+
+#cerberusAttackB{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+width:100%;
+}
+
+.cerberusAttackAAni{
+animation: cerberusAttackAAni 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes cerberusAttackAAni{
+0%{opacity:0;}
+100%{opacity:0.5;}
+}
+
+.cerberusAttackBAni{
+animation: cerberusAttackBAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes cerberusAttackBAni{
+0%{opacity:0;}
+49%{opacity:0;}
+50%{opacity:1;}
+75%{opacity:1;}
+100%{opacity:0;}
+}
+
+#cerberusSmoke{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+backGround:#bebebe;
+}
+
+.cerberusSmokeAni{
+animation: cerberusSmokeAni 13s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes cerberusSmokeAni{
+0%{opacity:0;}
+15%{opacity:1;}
+85%{opacity:1;}
+100%{opacity:0;}
+}
+
+#cerberusAttackC{
+position:absolute;
+opacity:0;
+top:30%;
+left:var(--cerberusAttackD);
+width:40%;
+}
+
+#cerberusAttackD{
+position:absolute;
+opacity:0;
+top:50%;
+left:var(--cerberusAttackD);
+width:40%;
+}
+
+#cerberusAttackE{
+position:absolute;
+opacity:0;
+bottom:63%;
+left:40%;
+width:2.4%;
+}
+
+#cerberusAttackF{
+position:absolute;
+opacity:0;
+bottom:69%;
+left:48.8%;
+width:2.4%;
+}
+
+#cerberusAttackG{
+position:absolute;
+opacity:0;
+bottom:63%;
+right:40%;
+width:2.4%;
+}
+
+#cerberusAttackH{
+position:absolute;
+opacity:0;
+left:30%;
+width:40%;
+bottom:33%;
+}
+
+.cerberusAttackCAni{
+animation: cerberusAttackCAni 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes cerberusAttackCAni{
+0%{opacity:1;bottom:69%;}
+100%{opacity:1;bottom:106%;}
+}
+
+.cerberusAttackDAni{
+animation: cerberusAttackDAni 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes cerberusAttackDAni{
+0%{opacity:1;bottom:63%;}
+100%{opacity:1;bottom:100%;}
+}
+
+#cerberusAttackIBase{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+}
+
+#cerberusAttackI{
+position:absolute;
+opacity:0;
+width:17%;
+bottom:100%;
+left:0%;
+}
+
+#cerberusAttackJ{
+position:absolute;
+opacity:0;
+width:17%;
+bottom:100%;
+left:17%;
+}
+
+#cerberusAttackK{
+position:absolute;
+opacity:0;
+width:17%;
+bottom:100%;
+left:33%;
+}
+
+#cerberusAttackL{
+position:absolute;
+opacity:0;
+width:17%;
+bottom:100%;
+right:33%;
+}
+
+
+#cerberusAttackM{
+position:absolute;
+opacity:0;
+width:17%;
+bottom:100%;
+right:17%;
+}
+
+
+#cerberusAttackN{
+position:absolute;
+opacity:0;
+width:17%;
+bottom:100%;
+right:0%;
+}
+
+.cerberusAttackEAni{
+animation: cerberusAttackEAni 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes cerberusAttackEAni{
+0%{opacity:1;bottom:100%;}
+100%{opacity:1;bottom:23%;}
+}
+
+/*暗黒騎士*/
+#ankokuScreen{
+position:absolute;
+top:0%;
+left:16%;
+width:68%;
+height:100%;
+}
+
+#ankokuSet{
+position:absolute;
+opacity:var(--ankokuSet);
+top:0%;
+width:100%;
+height:100%;
+}
+
+#ankokuImgBase{
+position:absolute;
+width:var(--ankokuWidth);
+height:12%;
+top:var(--ankokuTop);
+left:var(--ankokuLeft);
+}
+
+#ankokuImg{
+position:absolute;
+width:100%;
+}
+
+#ankokuEndingSet{
+position:absolute;
+opacity:var(--ankokuEndingSet);
+top:38%;
+left:45%;
+width:10%;
+}
+
+#ankokuBuff{
+position:absolute;
+opacity:0;
+width:10%;
+height:12%;
+top:var(--ankokuTop);
+left:var(--ankokuLeft);
+}
+
+#ankokuHeal{
+position:absolute;
+opacity:0;
+width:10%;
+height:12%;
+top:38%;
+left:45%;
+}
+
+#ankokuEffect{
+position:absolute;
+opacity:0;
+top:38%;
+left:45%;
+width:10%;
+height:12.3%;
+backGround:#f9ff00;
+}
+
+.ankokuAttackAAni{
+animation: ankokuAttackAAni 1.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes ankokuAttackAAni{
+0%{top:38%;left:45%;}
+50%{top:10%;}
+100%{top:65%;left:var(--ankokuAttackAAni);}
+}
+
+.ankokuAttackBAni{
+animation: ankokuAttackBAni 1.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes ankokuAttackBAni{
+0%{top:65%;left:var(--ankokuAttackAAni);}
+50%{top:10%;}
+100%{top:65%;left:var(--ankokuAttackBAni);}
+}
+
+.ankokuAttackCAni{
+animation: ankokuAttackCAni 1.5s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes ankokuAttackCAni{
+0%{top:65%;left:var(--ankokuAttackBAni);}
+50%{top:10%;}
+100%{top:38%;left:45%;}
+}
+
+.ankokuAttackDAni{
+animation: ankokuAttackDAni 1s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes ankokuAttackDAni{
+0%{opacity:0;}
+100%{opacity:1;}
+}
+
+#ankokuThunderSet{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+}
+
+#ankokuCloudSet{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+}
+
+.ankokuThunderA{
+position:absolute;
+bottom:25%;
+left:0%;
+width:10%;
+}
+
+.ankokuThunderB{
+position:absolute;
+bottom:25%;
+left:20%;
+width:10%;
+}
+
+.ankokuThunderC{
+position:absolute;
+bottom:25%;
+left:45%;
+width:10%;
+}
+
+.ankokuThunderD{
+position:absolute;
+bottom:25%;
+left:70%;
+width:10%;
+}
+
+.ankokuThunderE{
+position:absolute;
+bottom:25%;
+left:90%;
+width:10%;
+}
+
+/*ヘイムダル*/
+
+#heimdallrScreen{
+position:absolute;
+top:0%;
+left:16%;
+width:68%;
+height:100%;
+}
+
+#heimdallrSet{
+position:absolute;
+opacity:var(--heimdallrSet);
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#heimdallrEndingSet{
+position:absolute;
+opacity:var(--heimdallrEndingSet);
+top:40%;
+left:45%;
+width:10%;
+}
+
+#heimdallrImgBase{
+position:absolute;
+width:var(--heimdallrWidth);
+height:24%;
+bottom:var(--heimdallrBottom);
+left:var(--heimdallrLeft);
+transform: scale(var(--heimdallrDirection), 1);
+}
+
+#heimdallrImg{
+position:absolute;
+width:100%;
+}
+
+#heimdallrAttackA{
+position:absolute;
+bottom:32%;
+height:2%;
+width:var(--heimdallrAttackAwidth);
+left:var(--heimdallrAttackAleft);
+backGround:#f9ff00;
+}
+
+.heimdallrAttackAAni{
+animation: heimdallrAttackAAni 6s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes heimdallrAttackAAni{
+0%{bottom:var(--heimdallrBottom);left:var(--heimdallrLeft);}
+16%{bottom:50%;left:45%;}
+84%{bottom:50%;left:45%;}
+100%{bottom:var(--heimdallrBottom);left:var(--heimdallrLeft);}
+}
+
+#heimdallrAttackB{
+position:absolute;
+left:15%;
+bottom:20%;
+width:var(--heimdallrBeam);
+height:20%;
+transform: rotate(-30deg);
+backGround:#f9ff00;
+}
+
+#heimdallrAttackC{
+position:absolute;
+left:35%;
+bottom:18%;
+width:var(--heimdallrBeam);
+height:20%;
+transform: rotate(60deg);
+backGround:#f9ff00;
+}
+
+#heimdallrAttackD{
+position:absolute;
+left:60%;
+bottom:20%;
+width:var(--heimdallrBeam);
+height:20%;
+transform: rotate(-30deg);
+backGround:#f9ff00;
+}
+
+#heimdallrAttackE{
+position:absolute;
+left:85%;
+bottom:18%;
+width:var(--heimdallrBeam);
+height:20%;
+transform: rotate(60deg);
+backGround:#f9ff00;
+}
+
+#heimdallrFanA{
+position:absolute;
+bottom:60%;
+left:48%;
+width:4%;
+}
+
+#heimdallrFanB{
+position:absolute;
+bottom:60%;
+left:48%;
+width:4%;
+}
+
+#heimdallrFanC{
+position:absolute;
+bottom:60%;
+left:48%;
+width:4%;
+}
+
+#heimdallrFanD{
+position:absolute;
+bottom:60%;
+left:48%;
+width:4%;
+}
+
+.heimdallrAttackBAni{
+animation: heimdallrAttackBAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes heimdallrAttackBAni{
+0%{bottom:60%;left:48%;transform: rotate(0deg);}
+25%{bottom:38%;left:8%;transform: rotate(-30deg);}
+75%{bottom:38%;left:8%;transform: rotate(-30deg);}
+100%{bottom:60%;left:48%;transform: rotate(0deg);}
+}
+
+.heimdallrAttackCAni{
+animation: heimdallrAttackCAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes heimdallrAttackCAni{
+0%{bottom:60%;left:48%;transform: rotate(0deg);}
+25%{bottom:30%;left:40%;transform: rotate(60deg);}
+75%{bottom:30%;left:40%;transform: rotate(60deg);}
+100%{bottom:60%;left:48%;transform: rotate(0deg);}
+}
+
+.heimdallrAttackDAni{
+animation: heimdallrAttackDAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes heimdallrAttackDAni{
+0%{bottom:60%;left:48%;transform: rotate(0deg);}
+25%{bottom:38%;left:54%;transform: rotate(-30deg);}
+75%{bottom:38%;left:54%;transform: rotate(-30deg);}
+100%{bottom:60%;left:48%;transform: rotate(0deg);}
+}
+
+.heimdallrAttackEAni{
+animation: heimdallrAttackEAni 4s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes heimdallrAttackEAni{
+0%{bottom:60%;left:48%;transform: rotate(0deg);}
+25%{bottom:30%;left:92%;transform: rotate(60deg);}
+75%{bottom:30%;left:92%;transform: rotate(60deg);}
+100%{bottom:60%;left:48%;transform: rotate(0deg);}
+}
+
+#lyricaSkillBulletBase{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+z-index:-60;
+}
+#lyricaSkillBullet{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#e942df;
+}
+.lyricaSkill1{
+animation: lyricaSkill1 0.5s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes lyricaSkill1{
+0%{
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+}
+100%{
+left:50%;
+bottom:50%;
+height:0%;
+width:0%;
+}
+}
+#matoiSkillBulletBase{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+z-index:-60;
+}
+#matoiSkillBullet{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#424242;
+}
+.matoiSkill1{
+animation: matoiSkill1 2s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes matoiSkill1{
+0%{
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+}
+50%{
+bottom:80%;
+}
+100%{
+left:50%;
+bottom:50%;
+height:0%;
+width:0%;
+}
+}
+
+#rinneSkillBulletBase{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+z-index:-60;
+}
+#rinneSkillBullet{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#424242;
+}
+.rinneSkill1{
+animation: rinneSkill1 2s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes rinneSkill1{
+0%{
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+}
+50%{
+bottom:65%;
+}
+80%{
+left:50%;
+bottom:50%;
+height:0%;
+width:0%;
+}
+100%{
+left:50%;
+bottom:50%;
+height:0%;
+width:0%;
+}
+}
+
+#thorneSkillBullet{
+position:absolute;
+opacity:0;
+left:47.5%;
+bottom:50%;
+height:10%;
+width:5%;
+}
+
+#lulucaSkillBulletBase{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+z-index:-60;
+}
+
+.lulucaSkillBulletRight{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:12.5%;
+}
+
+.lulucaSkillBulletLeft{
+position:absolute;
+left:var(--lulucaSkillBulletLeft);
+bottom:22.9%;
+height:12.5%;
+transform: scale(var(--direction), 1);
+}
+
+#istaqaBulletBase{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#istaqaBullet{
+position:absolute;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+
+#skillBulletBase{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+
+#GBGSkillBulletBase{
+position:absolute;
+left:var(--shift);
+transform: scale(var(--direction), 1);
+bottom:22.9%;
+height:12.5%;
+width:10%;
+}
+
+#GBGSkillBullet{
+position:absolute;
+left:50%;
+bottom:20%;
+height:40%;
+width:40%;
+border-radius:50%;
+backGround:#fd7fae;
+}
+
+.GBGSkill1{
+animation: GBGSkill1 1s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes GBGSkill1{
+0%  {left:50%;}
+33% {backGround:#1fc7f6;}
+67% {backGround:#bdfd20;}
+80% {left:50%;}
+100%{left:200%;backGround:#fd7fae;}
+}
+
+#pororotchoSkillBulletBase{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:12.5%;
+width:10%;
+}
+
+#pororotchoSkillBullet{
+position:absolute;
+left:-100%;
+width:300%;
+}
+
+#mariaSkillBulletBase{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:12.5%;
+width:10%;
+}
+
+#mariaSkillBullet{
+position:absolute;
+bottom:0%;
+left:-100%;
+width:300%;
+}
+
+#gustafSkillBulletBase{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:12.5%;
+width:10%;
+}
+
+#gustafSkillBullet{
+position:absolute;
+bottom:0%;
+left:-100%;
+width:300%;
+}
+
+#thirteenSkillBack1{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+backGround:#81181c;
+}
+
+#thirteenSkillBack2{
+position:absolute;
+top:20%;
+left:44.5%;
+height:20%;
+width:11%;
+border-radius:50%;
+backGround:#fca997;
+}
+
+#dragonSkillBullet{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+height:100%;
+}
+
+#bugdollSkillBulletBase1{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+#bugdollSkillBulletBase2{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+#bugdollSkillBulletBase3{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+#bugdollSkillBulletBase4{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+#bugdollSkillBulletBase5{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+#bugdollSkillBulletBase6{
+position:absolute;
+top:0%;
+height:100%;
+width:68%;
+left:16%;
+margin-top:0%;
+margin-bottom:0%;
+}
+#bugdollSkillBullet1{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#353535;
+}
+#bugdollSkillBullet2{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#353535;
+}
+#bugdollSkillBullet3{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#353535;
+}
+#bugdollSkillBullet4{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#353535;
+}
+#bugdollSkillBullet5{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#353535;
+}
+#bugdollSkillBullet6{
+position:absolute;
+left:var(--shift);
+bottom:22.9%;
+height:6.25%;
+width:5%;
+background:#353535;
+}
+
+#kiraraSkillBullet{
+position:absolute;
+opacity:0;
+left:100%;
+top:30%;
+width:100%;
+}
+
+.kiraraSkill1{
+animation: kiraraSkill1 3s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes kiraraSkill1{
+0%  {left:100%;}
+100%{left:-100%;}
+}
+
+#stelleaSkill1{
+position:absolute;
+right:0%;
+bottom:0%;
+width:83%;
+}
+
+.stelleaSkill1{
+animation: stelleaSkill1 1.2s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes stelleaSkill1{
+0%  {transform: rotate(0deg);}
+100%{transform: rotate(3600deg);}
+}
+
+.yushaSkill1{
+animation: yushaSkill1 0.75s 0s 1;
+animation-fill-mode:forwards;
+}
+@keyframes yushaSkill1{
+0%  {bottom:0%;}
+50%{bottom:40%;}
+100%{bottom:0%;}
+}
+
+#nidhoggrSkill1{
+position:absolute;
+bottom:5%;
+left:100%;
+height:5%;
+width:var(--nidhoggrSkill1);
+backGround:#ff00b2;
+}
+
+#nidhoggrSkill1Core{
+position:absolute;
+bottom:30%;
+left:0%;
+height:40%;
+width:100%;
+backGround:#00beff;
+}
+
+.getDamage{
+background:#d00000;
+opacity:0.8;
+}
+
+#damageHitBase{
+position:absolute;
+top:0%;
+height:100%;
+width:100%;
+margin-top:0%;
+margin-bottom:0%;
+}
+
+#damageHit{
+position:absolute;
+left:var(--shift);
+bottom:0%;
+height:16%;
+width:9.9%;
+background:#d00000;
+opacity:0.8;
+}
+
+#heroHPbarBase{
+position:absolute;
+left:17.2%;
+bottom:3.3%;
+height:8.3%;
+}
+
+#heroHPbar{
+position:absolute;
+left:22.9%;
+bottom:4.6%;
+width:var(--heroHPbar);
+height:5.8%;
+background:#00ff5e;
+}
+
+#enemyHPbarBase{
+position:absolute;
+left:21.3%;
+top:1.7%;
+width:61.9%;
+}
+
+#enemyHPbar{
+position:absolute;
+top:2.9%;
+left:35.55%;
+height:5.8%;
+width:var(--enemyHPbar);
+background:#ff1a1a;
+}
+
+#damageEffectBase{
+position:absolute;
+top:0%;
+left:16%;
+height:100%;
+width:68%;
+margin-top:0%;
+margin-bottom:0%;
+z-index:-60;
+}
+
+#damageEffect{
+position:absolute;
+left:var(--damageEffect);
+bottom:22.9%;
+height:12.5%;
+}
+
+#backDamageEffect{
+position:absolute;
+opacity:var(--backDamageEffect);
+height:12.5%;
+top:43.75%;
+left:46.56%;
+z-index:-60;
+}
+
+#attackBuffEffect{
+position:absolute;
+bottom:0%;
+height:12.5%;
+left:var(--shift);
+opacity:1;
+}
+
+#defendBuffEffect{
+position:absolute;
+bottom:0%;
+height:12.5%;
+left:var(--shift);
+opacity:1;
+}
+
+#thomasBuffEffect{
+position:absolute;
+left:var(--shift);
+bottom:0%;
+width:10%;
+transform: scale(var(--direction), 1);
+opacity:0;
+}
+
+#healBuffEffect{
+position:absolute;
+bottom:0%;
+height:12.5%;
+left:var(--shift);
+opacity:1;
+}
+
+#whiteOut{
+position:absolute;
+opacity:var(--whiteOut);
+width:68%;
+height:100%;
+top:0%;
+left:16%;
+z-index:-60;
+background:#ffffff;
+}
+
+#gameOverScreen{
+position:absolute;
+opacity:var(--gameOverScreen);
+top:0%;
+left:0%;
+width:100%;
+z-index:-60;
+}
+
+#gameClearScreen{
+position:absolute;
+opacity:var(--gameClearScreen);
+top:0%;
+left:0%;
+height:100%;
+}
+
+#actionGameScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#enemySet{
+position:absolute;
+top:0%;
+left:0%;
+margin-top:0%;
+margin-bottom:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#heroLiberateScreen{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+z-index:-60;
+}
+
+#heroLiberate{
+position:absolute;
+top:10%;
+left:10%;
+height:80%;
+width:80%;
+}
+
+#heroLiberateImgBase{
+height:100%;
+width:100%;
+}
+
+.heroLiberateImg{
+width:20%;
+margin-left:2.5%;
+margin-right:2.5%;
+}
+
+#heroLiberateOK{
+position:absolute;
+bottom:20%;
+left:30%;
+height:10%;
+width:40%;
+}
+
+#heroLiberateOKButton{
+position:absolute;
+opacity:var(--heroLiberateOKButton);
+bottom:20%;
+left:30%;
+height:10%;
+width:40%;
+backGround:#ffffff;
+}
