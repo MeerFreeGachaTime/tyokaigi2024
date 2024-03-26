@@ -140,21 +140,7 @@ heimdallrAct2=0;
 
 
 
-window.addEventListener('load', (event) => {console.log("ver.1");
-
-const heroMove = document.getElementById("heroMoveId");
-heroMove.addEventListener("touchstart", function(){console.log("start");
- startSidePosi=touch.screenX;
-});
-heroMove.addEventListener("touchmove",function(){console.log("move");
- moveSidePosi=touch.screenX;
- if(Number(startSidePosi)+5<=moveSidePosi){rightOn=1;}
- else if(Number(startSidePosi)-5>=moveSidePosi){leftOn=1;}
-});
-heroMove.addEventListener("touchend",function(){console.log("end");
- rightOn=0;
- leftOn=0;
-});
+window.addEventListener('load', (event) => {console.log("ver.2");
 
 
   // ブラウザのウインドウサイズを取得する
@@ -162,8 +148,10 @@ heroMove.addEventListener("touchend",function(){console.log("end");
 
   windowW=windowH*1.817;
   var windowL = String((window.innerWidth-windowW)/2)+"px";
+  windowLN=(window.innerWidth-windowW)/2;
   document.documentElement.style.setProperty('--titleBaseLeft', windowL);
   windowW=String(windowW);
+  windowWN=windowH*1.817;
   var px = 'px';
   windowW = windowW.concat(px);
   document.documentElement.style.setProperty('--baseWidth', windowW);
@@ -174,6 +162,28 @@ heroMove.addEventListener("touchend",function(){console.log("end");
   console.log(windowH);
   sidePosi=0;
   skill=0;
+  
+  
+  document.body.addEventListener( "touchstart", function( event ) {
+	var touchObject = event.changedTouches[0] ;
+	startSidePosi = touchObject.pageX- windowLN;console.log(startSidePosi);console.log("X"+windowLN);
+  } ) ;
+  document.body.addEventListener( "touchmove", function( event ) {console.log("Xccc");
+   if(0<=startSidePosi&&startSidePosi<=windowWN*0.16){
+    rightOn=0;
+    leftOn=0;
+	var touchObject = event.changedTouches[0] ;
+	var moveSidePosi = touchObject.pageX- windowLN;console.log("start"+startSidePosi+",move"+moveSidePosi);
+	if(moveSidePosi>=windowWN*0.08){rightOn=1;console.log("Xaaa");}
+    else{leftOn=1;console.log("Xbbb");}
+   }
+  } ) ;
+  document.body.addEventListener( "touchend", function( event ) {
+	var touchObject = event.changedTouches[0] ;
+    rightOn=0;
+    leftOn=0;
+  } ) ;
+
 
   // この位置で、HTML要素に対するaddEventListenerを処理する。
   addListener();
@@ -182,7 +192,6 @@ heroMove.addEventListener("touchend",function(){console.log("end");
 function disableScroll(event) {
   event.preventDefault();
 }
-document.addEventListener('touchmove', disableScroll, { passive: false });//iosスクロール対策
 
 
 function toStageSelect(){
@@ -1404,7 +1413,7 @@ const log = function(){
 
   if(attackerOn){document.documentElement.style.setProperty('--pushAtaBut', "0.8");if(skill==0){attackerSkill();}}
   if(gunnerOn){document.documentElement.style.setProperty('--pushGunBut', "0.8");if(skill==0){gunnerSkill();}}
-  /*if(tankOn){document.documentElement.style.setProperty('--pushTanBut', "0.8");if(skill==0){tankSkill();}}*/
+  if(tankOn){document.documentElement.style.setProperty('--pushTanBut', "0.8");if(skill==0){tankSkill();}}
   if(!rightOn){document.documentElement.style.setProperty('--pushToRight', "0");}
   if(!leftOn){document.documentElement.style.setProperty('--pushToLeft', "0");}
   if(!attackerOn){document.documentElement.style.setProperty('--pushAtaBut', "0");}
@@ -2825,7 +2834,7 @@ function gameOver(){
        root.style.setProperty("--shift", "0%");
        direction=1;
        document.documentElement.style.setProperty('--direction', direction);
-       gameOverScreen.style.zIndex=10;
+       gameOverScreen.style.zIndex=60;
       },1000);
      },500);
     },500);
@@ -3607,5 +3616,4 @@ function heroLiberateBack(){
  var myh = document.getElementById("heroLiberateImgBase");
  myh.innerHTML = " ";
 }
-
 
