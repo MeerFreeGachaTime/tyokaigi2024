@@ -169,47 +169,19 @@ window.addEventListener('load', (event) => {console.log("ver.2");
 	startSidePosi = touchObject.pageX- windowLN;console.log(startSidePosi);console.log("X"+windowLN);
   } ) ;
   document.body.addEventListener( "touchmove", function( event ) {console.log("Xccc");
-   if(0<=startSidePosi&&startSidePosi<=windowWN*0.16){
+   if(startSidePosi<=windowWN*0.5){
     rightOn=0;
     leftOn=0;
 	var touchObject = event.changedTouches[0] ;
 	var moveSidePosi = touchObject.pageX- windowLN;console.log("start"+startSidePosi+",move"+moveSidePosi);
-	if(moveSidePosi>=windowWN*0.08){
-	 rightOn=1;console.log("Xaaa");
-	 document.documentElement.style.setProperty('--afterMoveButton', "61%");
-     const mekaAt1b = document.getElementById("moveButton");
-     moveHeroClass.classList.add('moveButtonAni');
-     document.documentElement.style.setProperty('--MoveButton', "61%");
-     setTimeout(function(){
-      moveHeroClass.classList.remove('moveButtonAni');
-      document.documentElement.style.setProperty('--beforeMoveButton', "61%");
-     },200);
-	}
-    else{
-     leftOn=1;console.log("Xbbb");
-	 document.documentElement.style.setProperty('--afterMoveButton', "1%");
-     const mekaAt1b = document.getElementById("moveButton");
-     moveHeroClass.classList.add('moveButtonAni');
-     document.documentElement.style.setProperty('--MoveButton', "1%");
-     setTimeout(function(){
-      moveHeroClass.classList.remove('moveButtonAni');
-      document.documentElement.style.setProperty('--beforeMoveButton', "1%");
-     },200);
-    }
+	if(moveSidePosi>=windowWN*0.08){rightOn=1;console.log("Xaaa");}
+    else{leftOn=1;console.log("Xbbb");}
    }
   } ) ;
   document.body.addEventListener( "touchend", function( event ) {
 	var touchObject = event.changedTouches[0] ;
     rightOn=0;
     leftOn=0;
-    document.documentElement.style.setProperty('--afterMoveButton', "31%");
-    const mekaAt1b = document.getElementById("moveButton");
-    moveHeroClass.classList.add('moveButtonAni');
-    document.documentElement.style.setProperty('--MoveButton', "31%");
-    setTimeout(function(){
-     moveHeroClass.classList.remove('moveButtonAni');
-     document.documentElement.style.setProperty('--beforeMoveButton', "31%");
-    },200);
   } ) ;
 
 
